@@ -1,10 +1,14 @@
-{% extends 'base.html'%}
-{% block content%}
-<h1> snacks List</h1>
-{% for x in object_list%}
-    <h2><a href="{% url 'snack_detail' x.id %}">{{x.name}}</a> </h2>
-    
-{% endfor %}
-<img src="    https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Azerbaijan_Light_snack.jpg/330px-Azerbaijan_Light_snack.jpg
-    " alt="Image">
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Thing Details</h1>
+    <div class="snack-list">
+        {% for x in object_list %}
+            <h2><a href="{% url 'snack_detail' x.id %}">{{ x.name }}</a></h2>
+        {% endfor %}
+    </div>
+<img src="    https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Azerbaijan_Light_snack.jpg/330px-Azerbaijan_Light_snack.jpg" alt="Image">
+<img src="        https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDdcBKSofCm4NvAOHjippa9I6fFzxuKFP28NEHioJo6eTcOaMdRJ5g6D3Kyhz5thTDqmU&usqp=CAU" alt="Image">   
+<img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/12/17/0/FNM_010116-Insert-Spicy-Snacks.jpg.rend.hgtvcom.406.406.suffix/1450382317771.jpeg" alt="Image">
+<img src="https://feelgoodfoodie.net/wp-content/uploads/2019/02/Hummus-Toast-2.jpg" alt="Image">
+
 {% endblock %}

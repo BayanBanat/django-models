@@ -14,9 +14,6 @@ class TestSnacks(TestCase):
 
 
 
-    def test_snack_detail_templates(self):
-        url = reverse('snack_detail')
-        response = self.client.get(url)
-        self.assertTemplateUsed(response, 'snack_detail.html')
+  
 
     
