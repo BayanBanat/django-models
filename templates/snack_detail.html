@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Thing Details</h1>
+    <h2>Name: {{ snack.name }}</h2>
+    <h2>Purchaser: {{ snack.purchaser }}</h2>
+    <h2>Description: {{ snack.description }}</h2>
+    
+    {% if snack.name == 'Samosa' %}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Banana_empanada.jpg/1280px-Banana_empanada.jpg" alt="Type 1 Image">
+    {% elif snack.name == 'Croquette' %}
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMoKGn6GOdQLmyHlgb68qTNkD-VnAFaxgbApSA5i36OT3M9M3mZBgiGbAiRBhIAWnePqA&usqp=CAU" alt="Type 2 Image">
+    {% elif snack.type == 'Pizza[7]' %}
+        <img src="https://www.allrecipes.com/thmb/0xH8n2D4cC97t7mcC7eT2SDZ0aE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6776_Pizza-Dough_ddmfs_2x1_1725-fdaa76496da045b3bdaadcec6d4c5398.jpg" alt="Type 3 Image">
+    {% else %}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Parippuvada_2011.jpg" alt="Default Image">
+    {% endif %}
+{% endblock %}
+

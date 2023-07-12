@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block content%}
+<h1> snacks List</h1>
+{% for x in object_list%}
+    <h2><a href="{% url 'snack_detail' x.id %}">{{x.name}}</a> </h2>
+    
+{% endfor %}
+<img src="    https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Azerbaijan_Light_snack.jpg/330px-Azerbaijan_Light_snack.jpg
+    " alt="Image">
+{% endblock %}
